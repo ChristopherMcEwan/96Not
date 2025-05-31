@@ -1,0 +1,138 @@
+/* Basic Reset & Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #4285F4; /* Google Blue */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+}
+
+.last-updated {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* Main Content Styles */
+main {
+    padding-top: 20px;
+}
+
+.news-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.news-section h2 {
+    color: #4285F4;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.article-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 15px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes meta to bottom */
+}
+
+.article-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.article-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    line-height: 1.4;
+}
+
+.article-card h3 a {
+    color: #1a0dab; /* Google Link Blue */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.article-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.article-card .snippet {
+    font-size: 0.95em;
+    color: #5f6368; /* Google Grey */
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows snippet to take available space */
+}
+
+.article-card .article-meta {
+    font-size: 0.8em;
+    color: #70757a; /* Lighter Google Grey */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; /* Space between snippet and meta */
+}
+
+.article-card .article-meta .source {
+    font-weight: 500;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+}
